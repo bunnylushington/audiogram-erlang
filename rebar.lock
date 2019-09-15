@@ -1,0 +1,8 @@
+{"1.1.0",
+[{<<"bbmustache">>,{pkg,<<"bbmustache">>,<<"1.8.0">>},0},
+ {<<"jsx">>,{pkg,<<"jsx">>,<<"2.10.0">>},0}]}.
+[
+{pkg_hash,[
+ {<<"bbmustache">>, <<"A268D256B3D5C7CF9FD14ECED58977BC71AADB7CE412E883C3A2CD0A10F3CF27">>},
+ {<<"jsx">>, <<"77760560D6AC2B8C51FD4C980E9E19B784016AA70BE354CE746472C33BEB0B1C">>}]}
+].
