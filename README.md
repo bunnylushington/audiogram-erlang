@@ -1,7 +1,9 @@
 # Audiogram
 
 A plotting device for audiogram data.  Receives JSON data and produces
-SVG.  There's [example output.](https://raw.githubusercontent.com/bunnylushington/audiogram-erlang/master/example.svg)
+SVG.  (There's [example output](example.svg) but GitHub seems to have
+issues actually displaying the graph.  Best to save the text and open
+it in a browser.)
 
 
 ## Use
