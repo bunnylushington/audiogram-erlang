@@ -162,8 +162,8 @@
   </defs>
 
   
-  <use xlink:href="#major-graph" />
-  <use xlink:href="#minor-graph" />
+  <use href="#major-graph" />
+  <use href="#minor-graph" />
 
   <style>
    text.mark {dominant-baseline: middle; text-anchor: middle;}
