@@ -1,8 +1,7 @@
 # Audiogram
 
-A plotting device for audiogram data.  Receives JSON data and produces SVG.  Here's an example:
-
-![example audiogram](./example.svg)
+A plotting device for audiogram data.  Receives JSON data and produces
+SVG.  There's [example output.](./example.svg).
 
 
 ## Use
