@@ -8,6 +8,18 @@
 
 -define(PLACEHOLDER, "audiogram_data").
 
+-define(MIN_Y, 400).  % origin of the Y axis
+-define(MAX_Y, 25).   % top Y axis tick
+-define(MIN_X, 80).   % origin of the X axis
+-define(MAX_X, 640).  % rightmost X axis tick
+
+-define(MIN_Y_VALUE, 140). % Y axis label at origin
+-define(MAX_Y_VALUE, -10). % Y axis label at top of Y axis
+
+-define(Y_AXIS_OFFSET, 25).  % pixels between Y axis ticks
+-define(X_AXIS_OFFSET, 80).  % pixels between x axis ticks
+
+
 audiogram() ->
   audiogram([], template()).
 
@@ -19,7 +31,7 @@ audiogram(Data, Template) when is_list(Data) ->
 
 audiogram(Data, Template) ->
   MarkHTML = evaluate_audiogram_data(Data),
-  io:format("Marks: ~p~n", [MarkHTML]),
+%  io:format("Marks: ~p~n", [MarkHTML]),
   bbmustache:render(Template, #{ ?PLACEHOLDER => MarkHTML }).
 
 template() -> 
@@ -112,4 +124,5 @@ x(   16) -> 640.
 %% Given a level in dB, return the Y coordinate of the mark.
 y(Data) when is_map(Data) -> y(maps:get(db, Data));
 y(DB) -> 
-  round(400 - ((DB + 10) * (400 / 160.0))).
+  ?MAX_Y + (((DB / 10) + 1) * ?Y_AXIS_OFFSET).
+
