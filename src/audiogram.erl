@@ -31,7 +31,6 @@ audiogram(Data, Template) when is_list(Data) ->
 
 audiogram(Data, Template) ->
   MarkHTML = evaluate_audiogram_data(Data),
-%  io:format("Marks: ~p~n", [MarkHTML]),
   bbmustache:render(Template, #{ ?PLACEHOLDER => MarkHTML }).
 
 template() -> 
