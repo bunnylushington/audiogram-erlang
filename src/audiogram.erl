@@ -4,6 +4,7 @@
         , audiogram/0
         , audiogram/1
         , audiogram/2
+        , mark/3
         ]).
 
 -define(PLACEHOLDER, "audiogram_data").
@@ -95,6 +96,7 @@ mark(Ear, Conduction, Data) when is_map(Data) ->
            end,
   mark(Ear, Conduction, Masked);
 
+%% Exported for use in help pages elsewhere.
 mark(right, air,  unmasked) -> "&#9675";  % circle
 mark(right, air,  masked)   -> "&#9651";  % triangle
 mark(left,  air,  unmasked) -> "&#10005"; % X
